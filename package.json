@@ -1,0 +1,70 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "ow",
+  "title": "Obby Wiki",
+  "description": "Quickly open and create pages on Obby Wiki.",
+  "icon": "obby-wiki.png",
+  "author": "wlft",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "open-page",
+      "title": "Open Page",
+      "description": "Open a page on the Obby Wiki by title.",
+      "mode": "view"
+    },
+    {
+      "name": "random-page",
+      "title": "Random Page",
+      "description": "Open a random Obby Wiki page.",
+      "mode": "no-view"
+    },
+    {
+      "name": "random-obby",
+      "title": "Random Obby",
+      "description": "Open a random Obby page on the Obby Wiki.",
+      "mode": "no-view"
+    },
+    {
+      "name": "edit-page",
+      "title": "Edit Page",
+      "description": "Edit or create a page on the Obby Wiki.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "page_title",
+          "type": "text",
+          "description": "The title of the page to edit or create.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.15",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
