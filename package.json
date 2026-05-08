@@ -18,7 +18,16 @@
       "name": "open-page",
       "title": "Open Page",
       "description": "Open a page on the Obby Wiki by title.",
-      "mode": "view"
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "page_title",
+          "type": "text",
+          "description": "The title of the page to open.",
+          "placeholder": "Tower of Hell",
+          "required": true
+        }
+      ]
     },
     {
       "name": "random-page",
@@ -42,6 +51,7 @@
           "name": "page_title",
           "type": "text",
           "description": "The title of the page to edit or create.",
+          "placeholder": "Tower of Hell",
           "required": true
         }
       ]
